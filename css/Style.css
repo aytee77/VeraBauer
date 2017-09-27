@@ -1,3 +1,74 @@
-﻿body
-{
+﻿body {
+    background-color: #660000;
 }
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+    nav > div > div > a, nav > div > div > span {
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(255,230,1,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        border-radius: 50%;
+        width: 90px;
+        display: block;
+        text-align: center;
+    }
+
+    nav > div > div > a {
+        opacity: 0;
+        transition: ease all .5s;
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 20%, rgba(255,255,255,0) 85%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 20%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(255,230,1,1) 20%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        position: absolute;
+        height: 100%;
+        top: 0
+    }
+    nav > div > div > div {
+        position: absolute;
+        width: 90px;
+        top: 50%;
+        text-align: center;
+        margin-top: -9px;
+
+    }
+
+    nav > div:hover > div > a {
+        opacity: 1;
+    }
+
+    nav > div > div > span:before {
+        content: '';
+        padding: 50% 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    @media(min-width:769px){
+        nav a {
+            font-size: 14px;
+        }
+        nav > div > div > a, nav > div > div > span, nav > div > div > div {
+            width: 110px;
+        }
+
+    }
+
+    @media(min-width:990px){
+        nav a {
+            font-size: 18px;
+        }
+        nav > div > div > a, nav > div > div > span, nav > div > div > div {
+            width: 150px;
+        }
+
+    }
