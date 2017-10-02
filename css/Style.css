@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #660000;
+    background-color: #ccc;
 }
 
 nav {
@@ -13,62 +13,42 @@ nav a {
     color: black;
 }
 
-    nav > div > div > a, nav > div > div > span {
-        background: -moz-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, rgba(255,230,1,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        border-radius: 50%;
-        width: 90px;
-        display: block;
-        text-align: center;
+nav > div.col-xs-4 {
+    padding: 0 5px;
+}
+
+    nav a div {
+        border-radius: 100%;
+        background-color: rgba(255,255,255,0.13);
+        box-shadow: inset 2px -2px 10px rgba(255,255,255,0.20);
+        transition: ease background-color 0.4s, ease box-shadow 0.4s;
     }
 
-    nav > div > div > a {
-        opacity: 0;
-        transition: ease all .5s;
-        background: -moz-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 20%, rgba(255,255,255,0) 85%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,230,1,1) 20%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, rgba(255,230,1,1) 20%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        position: absolute;
-        height: 100%;
-        top: 0
+    nav a div:hover, nav a div.active {
+        background: rgba(255,255,255,1);
+        box-shadow: 0px 2px 10px rgba(255,255,255,0.8), 0px 5px 50px rgba(255,255,255,0.8), 0px 8px 80px rgba(255,255,255,0.6), 0px 8px 120px rgba(255,255,255,0.6);;
     }
-    nav > div > div > div {
-        position: absolute;
-        width: 90px;
+
+    nav a div span {
+        position: relative;
+        float: left;
         top: 50%;
-        text-align: center;
-        margin-top: -9px;
-
-    }
-
-    nav > div:hover > div > a {
-        opacity: 1;
-    }
-
-    nav > div > div > span:before {
-        content: '';
-        padding: 50% 0;
-        display: inline-block;
-        vertical-align: middle;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     @media(min-width:769px){
         nav a {
             font-size: 14px;
         }
-        nav > div > div > a, nav > div > div > span, nav > div > div > div {
-            width: 110px;
+        
+        nav > div.col-xs-4 {
+            padding: 0 15px;
         }
-
     }
 
     @media(min-width:990px){
         nav a {
             font-size: 18px;
         }
-        nav > div > div > a, nav > div > div > span, nav > div > div > div {
-            width: 150px;
-        }
-
     }
