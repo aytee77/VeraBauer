@@ -25,12 +25,12 @@ function InitMobilenav() {
 }
 
 function CloseMobileNav() {
-    $(".MobileHidden").slideUp(400);
+    $(".MobileHidden").stop().slideUp(400);
     window.mobileNavOpen = false;
 }
 
 function OpenMobileNav() {
-    $(".MobileHidden").slideDown(400);
+    $(".MobileHidden").stop().slideDown(400);
     window.mobileNavOpen = true;
 }
 
