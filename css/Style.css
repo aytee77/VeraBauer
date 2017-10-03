@@ -40,6 +40,8 @@ nav a div span, nav a div svg {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+    transition: ease all 0.4s;
     }
 
 .MobileHidden {
@@ -47,10 +49,11 @@ nav a div span, nav a div svg {
     clear: both;
 }
 
-    .MobileHidden.open {
-        max-height: 250px;
-        clear: both;
-    }
+.MobileToggle.open svg {
+    -ms-transform: rotateZ(180deg) translate(50%, 50%); /* IE 9 */
+    -webkit-transform: rotateZ(180deg) translate(50%, 50%); /* Chrome, Safari, Opera */
+    transform: rotateZ(180deg) translate(50%, 50%);
+}
 
     @media(min-width:769px){
         nav a {

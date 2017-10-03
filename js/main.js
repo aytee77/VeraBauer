@@ -25,11 +25,13 @@ function InitMobilenav() {
 }
 
 function CloseMobileNav() {
+    $(".MobileToggle").removeClass("open");
     $(".MobileHidden").stop().slideUp(400);
     window.mobileNavOpen = false;
 }
 
 function OpenMobileNav() {
+    $(".MobileToggle").addClass("open");
     $(".MobileHidden").stop().slideDown(400);
     window.mobileNavOpen = true;
 }
