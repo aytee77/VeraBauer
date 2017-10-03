@@ -2,6 +2,14 @@
     background-color: #ccc;
 }
 
+h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+p {
+    margin-top: 0;
+}
+
 nav {
     margin-top: 15px;
 }
@@ -53,6 +61,12 @@ nav a div span, nav a div svg {
     -ms-transform: rotateZ(180deg) translate(50%, 50%); /* IE 9 */
     -webkit-transform: rotateZ(180deg) translate(50%, 50%); /* Chrome, Safari, Opera */
     transform: rotateZ(180deg) translate(50%, 50%);
+}
+
+
+.gigDate {
+    text-align: right;
+    font-weight: bold;
 }
 
     @media(min-width:769px){
