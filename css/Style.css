@@ -1,5 +1,6 @@
 ﻿body {
     background-color: #ccc;
+    color: #444
 }
 
 h1 {
@@ -9,17 +10,24 @@ h1 {
 p {
     margin-top: 0;
 }
+a {
+    outline: none;
+}
+
+header {
+    margin-bottom: 20px;
+}
 
 nav {
     margin-top: 15px;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-}
+    nav a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        color: #444
+    }
 
 nav  div.col-xs-4 {
     padding: 0 5px;
@@ -65,8 +73,23 @@ nav a div span, nav a div svg {
 
 
 .gigDate {
-    text-align: right;
     font-weight: bold;
+}
+
+.auffuehrung {
+    margin-bottom: 15px;
+}
+
+.auffuehrung h3{
+    margin: 0;
+}
+
+.auffuehrung p{
+    margin: 0;
+}
+
+.auffuehrung p.description {
+    color: #000;
 }
 
     @media(min-width:769px){
@@ -82,6 +105,14 @@ nav a div span, nav a div svg {
             display: block !important;
             clear: none;
         }
+        .gigDate {
+            text-align: right;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
     }
 
     @media(min-width:990px){
