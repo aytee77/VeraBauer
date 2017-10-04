@@ -15,7 +15,15 @@ a {
 }
 
 header {
-    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #ccc;
+    z-index: 10;
+}
+
+.scrolled header {
+    box-shadow: #000000 0 -6px 16px;
 }
 
 nav {
@@ -80,13 +88,13 @@ nav a div span, nav a div svg {
     margin-bottom: 15px;
 }
 
-.auffuehrung h3{
-    margin: 0;
-}
+    .auffuehrung h3, .programm h3 {
+        margin: 0;
+    }
 
-.auffuehrung p{
-    margin: 0;
-}
+    .auffuehrung p, .programm p{
+        margin: 0;
+    }
 
 .auffuehrung p.description {
     color: #000;
@@ -105,14 +113,7 @@ nav a div span, nav a div svg {
             display: block !important;
             clear: none;
         }
-        .gigDate {
-            text-align: right;
-        }
-
-        header {
-            margin-bottom: 50px;
-        }
-
+        .gigDate { text-align: right; }
     }
 
     @media(min-width:990px){
