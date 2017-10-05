@@ -12,6 +12,8 @@ p {
 }
 a {
     outline: none;
+    color: #444;
+    text-decoration: none;
 }
 
 header {
@@ -100,12 +102,24 @@ nav a div span, nav a div svg {
     color: #000;
 }
 
-    @media(min-width:769px){
+.programm > div > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+
+    transition: ease background-color .4s;
+}
+
+.programm > div > a:hover {
+    background-color: #eee;
+}
+
+    @media(min-width:769px) {
         nav a {
             font-size: 14px;
         }
-        
-        nav  div.col-xs-4 {
+
+        nav div.col-xs-4 {
             padding: 0 15px;
         }
 
@@ -113,10 +127,13 @@ nav a div span, nav a div svg {
             display: block !important;
             clear: none;
         }
-        .gigDate { text-align: right; }
+
+        .gigDate {
+            text-align: right;
+        }
     }
 
-    @media(min-width:990px){
+    @media(min-width:990px) {
         nav a {
             font-size: 18px;
         }
