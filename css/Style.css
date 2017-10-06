@@ -119,13 +119,42 @@ nav a div span, nav a div svg {
     transition: ease background-color .4s;
 }
 
-.programm > div > a:hover {
+.programm > div > a:hover{
     background-color: #eee;
 }
 
 .smallImages {
     margin-top: 25px;
 }
+
+.print {
+    width: 35px;
+    float: right;
+    cursor: pointer;
+}
+
+.customSelect {
+    width: 100px;
+    overflow-x: hidden;
+    border: #000 solid 1px;
+    background: #fff;
+    border-radius: 5px;
+    height: 40px;
+    /*Dieser div kan generell gestyled werden wie er will*/
+    background-image: url('../img/ArrowDown.svg'); /* Pfeil für das dropdown*/
+    background-repeat: no-repeat;
+    background-position: 95%; /* Positioniert den Pfeil */
+    background-size: 20px;
+    float: left;
+}
+
+    .customSelect select {
+        width: 120%; /*Lässt den pfeil des select ausserhalb des Div ragen (Wird dank overflow-x: hidden abgeschnitten)*/
+        border: none;
+        height: 38px;
+        background: none;
+    }
+
 
     @media(min-width:769px) {
         nav a {
