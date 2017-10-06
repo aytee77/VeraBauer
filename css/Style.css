@@ -79,6 +79,10 @@ nav a div span, nav a div svg {
     transition: ease all 0.4s;
     }
 
+.square {
+    height: 97px;
+}
+
 .MobileHidden {
     display: none;
     clear: both;
@@ -133,6 +137,10 @@ nav a div span, nav a div svg {
     cursor: pointer;
 }
 
+.filter {
+    margin-bottom: 20px;
+}
+
 .customSelect {
     width: 100px;
     overflow-x: hidden;
@@ -172,6 +180,10 @@ nav a div span, nav a div svg {
 
         .gigDate {
             text-align: right;
+        }
+
+        .square {
+            height: 165px;
         }
     }
 
