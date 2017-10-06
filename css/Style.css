@@ -103,7 +103,7 @@ nav a div span, nav a div svg {
     margin-bottom: 15px;
 }
 
-    .auffuehrung h3, .programm h3 {
+    .auffuehrung h3, .programm h3, .presse h2 {
         margin: 0;
     }
 
@@ -115,16 +115,26 @@ nav a div span, nav a div svg {
     color: #000;
 }
 
-.programm > div > a {
+.programm > div > a, .presse > div > div {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #000;
-
     transition: ease background-color .4s;
 }
 
 .programm > div > a:hover{
     background-color: #eee;
+}
+.presse {
+    margin-bottom: 20px
+}
+.presse p.lead {
+    margin-bottom: 10px;
+}
+
+.presse > div > div {
+    padding: 10px 0 0;
+    border-bottom: 1px solid #000;
 }
 
 .smallImages {
