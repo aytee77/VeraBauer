@@ -7,8 +7,17 @@ h1 {
     margin-top: 0;
     margin-bottom: 10px;
 }
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
 p {
     margin-top: 0;
+}
+p.lead {
+    font-size: 17px;
+    margin-bottom: 35px;
 }
 a {
     outline: none;
@@ -112,6 +121,10 @@ nav a div span, nav a div svg {
 
 .programm > div > a:hover {
     background-color: #eee;
+}
+
+.smallImages {
+    margin-top: 25px;
 }
 
     @media(min-width:769px) {
