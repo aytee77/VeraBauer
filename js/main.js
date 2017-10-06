@@ -10,6 +10,7 @@ function PageInit() {
     InitMobilenav();
     handlHeaderSpace();
     handleScrollHeader();
+    initGallerie();
 }
 
 function PageResize() {
@@ -45,8 +46,11 @@ function OpenMobileNav() {
 }
 
 function squareCalc() {
-    $(".square").each(function() {
-        $(this).height($(".square").width());
+    $("nav .square").each(function() {
+        $(this).height($("nav .square").width());
+    });
+    $(".button .square").each(function() {
+        $(this).height($(this).width());
     });
 }
 
@@ -60,4 +64,24 @@ function handleScrollHeader() {
     } else {
         $("html").removeClass("scrolled");
     }
+}
+
+function initGallerie() {
+    $('#GallerieButton').magnificPopup({
+        items: [
+            {
+                src: 'https://via.placeholder.com/800x900/ffffff'
+            },
+            {
+                src: 'https://via.placeholder.com/850x960/ffffff'
+            },
+            {
+                src: 'https://via.placeholder.com/400x500/ffffff'
+            },
+        ],
+        gallery: {
+            enabled: true
+        },
+        type: 'image'
+    });
 }
