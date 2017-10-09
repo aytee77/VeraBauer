@@ -1,7 +1,14 @@
-﻿body {
-    background-color: #ccc;
-    color: #444
+﻿@import url('https://fonts.googleapis.com/css?family=Lato');
+/* palette: http://paletton.com/#uid=73y0o0kllHa00++aMSVxT-6NGhL */
+body {
+    background-color: #4B8FC7;
+    color: #222;
+    font-family: 'Lato', sans-serif;
 }
+h1, h2, h3, h4 {
+    color: #FFB800;
+}
+
 h1 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -20,18 +27,18 @@ p.lead {
 }
 a {
     outline: none;
-    color: #444;
+    color: #FFB800;
     text-decoration: none;
 }
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #ccc;
+    background-color: #4B8FC7;
     z-index: 10;
 }
 .scrolled header {
-    box-shadow: #000000 0 -6px 16px;
+    box-shadow: #222 0 -6px 16px;
 }
 nav {
     margin-top: 15px;
@@ -40,7 +47,7 @@ nav {
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
-        color: #444
+        color: #222
     }
 nav  div.col-xs-4 {
     padding: 0 5px;
@@ -98,18 +105,22 @@ nav a div span, nav a div svg, .button div span {
     .auffuehrung p, .programm p{
         margin: 0;
     }
-.auffuehrung p.description {
-    color: #000;
+.auffuehrung p {
+    color: #222;
 }
+
+        p.description {
+            color: #FFE7A9;
+        }
 .programm > div > a, .presse > div > div {
     display: block;
     padding: 10px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #222;
     transition: ease background-color .4s;
 }
-.programm > div > a:hover{
-    background-color: #eee;
-}
+    .programm > div > a:hover {
+        background-color: #0B65B0;
+    }
 .presse {
     margin-bottom: 20px
 }
