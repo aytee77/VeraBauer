@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robustes Dateikopieren fÅr Windows                              
+-------------------------------------------------------------------------------
+
+  Gestartet: Montag, 13. November 2017 09:36:10
+   Quelle : D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Umbraco_Client\
+     Ziel : D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\App_Data\NuGetBackup\20171113-093609\Umbraco_Client\
+
+    Dateien : *.*
+	    
+  Optionen: *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Umbraco_Client\
+
+------------------------------------------------------------------------------
+
+           Insgesamt   KopiertöbersprungenKeine öbereinstimmung    FEHLER    Extras
+Verzeich.:         1         0         1         0         0         0
+  Dateien:         0         0         0         0         0         0
+    Bytes:         0         0         0         0         0         0
+   Zeiten:   0:00:00   0:00:00                       0:00:00   0:00:00
+   Beendet: Montag, 13. November 2017 09:36:10
+

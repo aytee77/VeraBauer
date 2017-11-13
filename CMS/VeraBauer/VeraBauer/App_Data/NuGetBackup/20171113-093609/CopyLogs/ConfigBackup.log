@@ -1,0 +1,71 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robustes Dateikopieren fÅr Windows                              
+-------------------------------------------------------------------------------
+
+  Gestartet: Montag, 13. November 2017 09:36:09
+   Quelle : D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Config\
+     Ziel : D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\App_Data\NuGetBackup\20171113-093609\Config\
+
+    Dateien : *.*
+	    
+  Optionen: *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  18	D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Config\
+	    Neue Datei		     305	404handlers.config  0%  100%  
+	    Neue Datei		     681	applications.config  0%  100%  
+	    Neue Datei		     739	BaseRestExtensions.config  0%  100%  
+	    Neue Datei		    3981	ClientDependency.config  0%  100%  
+	    Neue Datei		    2957	Dashboard.config  0%  100%  
+	    Neue Datei		    7088	EmbeddedMedia.config  0%  100%  
+	    Neue Datei		    1261	ExamineIndex.config  0%  100%  
+	    Neue Datei		    1834	ExamineSettings.config  0%  100%  
+	    Neue Datei		     429	feedProxy.config  0%  100%  
+	    Neue Datei		     286	FileSystemProviders.config  0%  100%  
+	    Neue Datei		    1167	grid.editors.config.js  0%  100%  
+	    Neue Datei		    1141	HealthChecks.config  0%  100%  
+	    Neue Datei		    1108	log4net.config  0%  100%  
+	    Neue Datei		      72	metablogConfig.config  0%  100%  
+	    Neue Datei		     837	scripting.config  0%  100%  
+	    Neue Datei		   12365	tinyMceConfig.config  0%  100%  
+	    Neue Datei		    5461	trees.config  0%  100%  
+	    Neue Datei		    9566	umbracoSettings.config  0%  100%  
+	 Neues Verz.       3	D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Config\imageprocessor\
+	    Neue Datei		     378	cache.config  0%  100%  
+	    Neue Datei		    3934	processing.config  0%  100%  
+	    Neue Datei		    1064	security.config  0%  100%  
+	 Neues Verz.      18	D:\projects\VeraBauer\CMS\VeraBauer\VeraBauer\Config\Lang\
+	    Neue Datei		      83	cs-CZ.user.xml  0%  100%  
+	    Neue Datei		      82	da-DK.user.xml  0%  100%  
+	    Neue Datei		      82	de-DE.user.xml  0%  100%  
+	    Neue Datei		      82	en-GB.user.xml  0%  100%  
+	    Neue Datei		      82	en-US.user.xml  0%  100%  
+	    Neue Datei		      82	es-ES.user.xml  0%  100%  
+	    Neue Datei		      82	fr-FR.user.xml  0%  100%  
+	    Neue Datei		      85	he-IL.user.xml  0%  100%  
+	    Neue Datei		      85	it-IT.user.xml  0%  100%  
+	    Neue Datei		      82	ja-JP.user.xml  0%  100%  
+	    Neue Datei		      85	ko-KR.user.xml  0%  100%  
+	    Neue Datei		      85	nb-NO.user.xml  0%  100%  
+	    Neue Datei		      82	nl-NL.user.xml  0%  100%  
+	    Neue Datei		      85	pl-PL.user.xml  0%  100%  
+	    Neue Datei		      85	pt-BR.user.xml  0%  100%  
+	    Neue Datei		      82	ru-RU.user.xml  0%  100%  
+	    Neue Datei		      85	sv-SE.user.xml  0%  100%  
+	    Neue Datei		      80	zh-CN.user.xml  0%  100%  
+
+------------------------------------------------------------------------------
+
+           Insgesamt   KopiertöbersprungenKeine öbereinstimmung    FEHLER    Extras
+Verzeich.:         3         2         1         0         0         0
+  Dateien:        39        39         0         0         0         0
+    Bytes:    56.7 k    56.7 k         0         0         0         0
+   Zeiten:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+Geschwindigkeit:             2005172 Bytes/Sek.
+Geschwindigkeit:             114.736 Megabytes/Min.
+   Beendet: Montag, 13. November 2017 09:36:09
+
