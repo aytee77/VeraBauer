@@ -329,6 +329,12 @@
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
     <Content Include="Views\shared\_Master.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Partials\_Navigation.cshtml" />
+    <Content Include="Views\Spielplan.cshtml" />
+    <Content Include="Views\Programme.cshtml" />
+    <Content Include="Views\Presse.cshtml" />
+    <Content Include="Views\ZurPerson.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

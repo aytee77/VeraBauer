@@ -1,0 +1,55 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Presse>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "~/Views/shared/_Master.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+        <h1>@Umbraco.Field("titel")</h1>
+    </div>
+</div>
+
+<section class="row presse">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div>
+            <h2>«Heute Hui, morgen Pfui»</h2>
+            <p class="lead">Deftig-barocke Lebenspredigten von Abraham a Sancta Clara</p>
+            <p>
+                … Zum einen, weil Vera Bauer und Christoph Greuter so leidenschaftlich,
+                kunstvoll, beseelt, charmant und in immenser gegenseitiger Abgestimmtheit
+                agierten; zum andern, weil viele Geschehnisse ohne nennenswerte Probleme
+                in unsere heutige, nicht immer gleichermassen ab- und aufgeklärte Zeit
+                übertragen werden können. So waren Hinhören und Mitverfolgen eine gar
+                vergnügliche Angelegenheit. Vera Bauer … agierte so kunstreich, mit den
+                Texten spielend, Leidenschaften heraufbeschwörend, spürbar mitfühlend,
+                wenn es das Schicksal mit den dargestellten Figuren gar schlecht meinte,
+                über Tölpelhaftes lachend, Unbeholfenheiten maliziös aufzeigend – ihr Schildern
+                gedieh zum Genuss. Christoph Greuters Spielkunst war von stiller Leidenschaft,
+                hoher inhaltlicher Reife, Tanz, Verharren, Lautmalerischem geprägt.
+                Er drückte gar vieles enorm stimmungsvoll aus, passend zum textlichen
+                Sturm und Drang. Man freute sich über die launigen Inhalte, genoss mit,
+                schmunzelte, lachte.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="row presse">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                imperdiet a, venenatis vitae, justo.
+            </p>
+        </div>
+    </div>
+</section>

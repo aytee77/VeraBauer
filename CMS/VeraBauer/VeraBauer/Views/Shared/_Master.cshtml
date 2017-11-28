@@ -5,67 +5,19 @@
     <meta charset="utf-8" />
     <title>Vera Bauer</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link href="css/Bootstratp.min.css" rel="stylesheet" />
-    <link href="css/magnific-popup.css" rel="stylesheet" />
-    <link href="css/Style.css" rel="stylesheet" />
+    <link href="/css/Bootstratp.min.css" rel="stylesheet" />
+    <link href="/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/css/Style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="row">
-                <div class="col-xs-4 col-sm-2 col-sm-offset-1">
-                    <a href="Index.html">
-                        <div class="square active">
-                            <span>Startseite</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4 col-sm-2">
-                    <a href="Spielplan.html">
-                        <div class="square">
-                            <span>Spielplan</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4 col-sm-2 visible-xs MobileToggle">
-                    <a>
-                        <div class="square">
-                            <span>Mehr...</span><br />
-                            <svg enable-background="new 0 0 32 32" height="20px" id="arrowDown" version="1.1" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" height="32" width="32" /></g><g id="arrow_x5F_down"><polygon points="2.002,10 16.001,24 30.002,10  " /></g></svg>
-                        </div>
-                    </a>
-                </div>
-                <div class="MobileHidden">
-                    <div class="col-xs-4 col-sm-2">
-                        <a href="Programme.html">
-                            <div class="square">
-                                <span>Programme</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-4 col-sm-2">
-                        <a href="Presse.html">
-                            <div class="square">
-                                <span>Presse</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-4 col-sm-2">
-                        <a href="Zur-Person.html">
-                            <div class="square">
-                                <span>Zur Person</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        @{Html.RenderPartial("_Navigation");}
     </header>
     <div class="container">
         @RenderBody()
     </div>
-    <script src="js/jQuery.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/jQuery.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
