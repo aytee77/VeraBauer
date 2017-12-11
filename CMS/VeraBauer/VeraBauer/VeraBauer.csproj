@@ -335,6 +335,7 @@
     <Content Include="Views\Programme.cshtml" />
     <Content Include="Views\Presse.cshtml" />
     <Content Include="Views\ZurPerson.cshtml" />
+    <Content Include="Views\Programm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

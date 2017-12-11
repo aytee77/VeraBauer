@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Programm>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "~/Views/shared/_Master.cshtml";
+}
+
+<section class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+        <h1>@Umbraco.Field("titel")</h1>
+        <h2 class="light">@Umbraco.Field("untertitel")</h2>
+        <p class="lead">@Umbraco.Field("kuenstler")</p>
+        @Umbraco.Field("text")
+    </div>
+    @if (Model.Content.HasValue("bild"))
+    {
+        var imagesList = Model.Content.GetPropertyValue<List<IPublishedContent>>("bild");
+
+        if (imagesList.Count > 0)
+        {
+            <div class="col-sm-4">
+                <img alt="Luther" Title="Luther" class="img-responsive" src="@imagesList.First().Url" />
+                @if (imagesList.Count > 1)
+                {
+                    imagesList.RemoveAt(0);
+                    <div class="row smallImages">
+                        @foreach (var imageItem in imagesList)
+                        {
+                            <div class="col-xs-6">
+                                <img alt="Luther" Title="Luther" class="img-responsive" src="@imageItem.Url" />
+                            </div>
+                        }    
+                    </div>
+                }
+            </div>
+        }
+    }
+</section>

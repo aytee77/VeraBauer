@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "8368488c178040bb")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e0e04c5d526fa1bd")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -221,6 +221,77 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Titel
 		{
 			get { return this.GetPropertyValue<string>("titel"); }
+		}
+	}
+
+	/// <summary>Programm</summary>
+	[PublishedContentModel("programm")]
+	public partial class Programm : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "programm";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Programm(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Programm, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Bilder
+		///</summary>
+		[ImplementPropertyType("bild")]
+		public IEnumerable<IPublishedContent> Bild
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("bild"); }
+		}
+
+		///<summary>
+		/// Künstler
+		///</summary>
+		[ImplementPropertyType("kuenstler")]
+		public string Kuenstler
+		{
+			get { return this.GetPropertyValue<string>("kuenstler"); }
+		}
+
+		///<summary>
+		/// Text
+		///</summary>
+		[ImplementPropertyType("text")]
+		public IHtmlString Text
+		{
+			get { return this.GetPropertyValue<IHtmlString>("text"); }
+		}
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[ImplementPropertyType("titel")]
+		public string Titel
+		{
+			get { return this.GetPropertyValue<string>("titel"); }
+		}
+
+		///<summary>
+		/// Untertitel
+		///</summary>
+		[ImplementPropertyType("untertitel")]
+		public string Untertitel
+		{
+			get { return this.GetPropertyValue<string>("untertitel"); }
 		}
 	}
 
