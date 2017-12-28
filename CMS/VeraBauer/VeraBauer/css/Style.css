@@ -173,6 +173,15 @@ nav a div span, nav a div svg, .button div span {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    max-width: 1170px;
+    background-color:#4B8FC7;
+    z-index:9;
+}
+
     @media(min-width:769px) {
         nav a {
             font-size: 14px;
@@ -196,3 +205,4 @@ nav a div span, nav a div svg, .button div span {
             font-size: 18px;
         }
     }
+

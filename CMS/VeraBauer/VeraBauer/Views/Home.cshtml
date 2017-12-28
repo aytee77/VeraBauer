@@ -1,106 +1,33 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "~/Views/shared/_Master.cshtml"; 
+    Layout = "~/Views/shared/_Master.cshtml";
+    IEnumerable<IPublishedContent> auffuehrungen = Umbraco.Content(1067).Children();
+    auffuehrungen = auffuehrungen.Where(c => c.GetPropertyValue<DateTime>("datum") > DateTime.Now).Take(3);
 }
 
 <div class="row">
-            <div class="col-sm-6 col-sm-offset-1">
-                <h1>@Umbraco.Field("titel")</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-right-1 pull-right">
-                <img alt="Vera Bauer" class="img-responsive" src="https://via.placeholder.com/800x500/ffffff" />
-            </div>
-            <div class="col-sm-4 col-sm-offset-1">
-                @Umbraco.Field("einleitung")
-            </div>
+    <div class="col-sm-6 col-sm-offset-1">
+        <h1>@Umbraco.Field("titel")</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-right-1 pull-right">
+        <img alt="Vera Bauer" class="img-responsive" src="https://via.placeholder.com/800x500/ffffff" />
+    </div>
+    <div class="col-sm-4 col-sm-offset-1">
+        @Umbraco.Field("einleitung")
+    </div>
 
-        </div>
+</div>
 
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-                <h2>Bevorstehende Aufführungen</h2>
-            </div>
-        </div>
-        <section class="auffuehrung">
-            <a href="ProgrammDetail.html">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-3">
-                        <h3>Mensch, Luther!</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2 col-sm-offset-1 gigDate">
-                        <p>
-                            Mittwoch<br class="hidden-xs" />
-                            11. Oktober 2017<br class="hidden-xs" />
-                            20 Uhr
-                        </p>
-                    </div>
-                    <div class="col-sm-8">
-                        <p class="description">Ein Lebensportrait in Briefen, Reflexionen und Musik</p>
-                        <p>
-                            Vera Bauer, Sprecherin – David Goldzycher, Violine.
-                            Goethe-Institut Moskau,
-                            Leninskij Prospekt 95a,
-                            119313 Moskau, Russische Föderation
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </section>
-        <section class="auffuehrung">
-            <a href="ProgrammDetail.html">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-3">
-                        <h3>Mensch, Luther!</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2 col-sm-offset-1 gigDate">
-                        <p>
-                            Mittwoch<br class="hidden-xs" />
-                            11. Oktober 2017<br class="hidden-xs" />
-                            20 Uhr
-                        </p>
-                    </div>
-                    <div class="col-sm-8">
-                        <p class="description">Ein Lebensportrait in Briefen, Reflexionen und Musik</p>
-                        <p>
-                            Vera Bauer, Sprecherin – David Goldzycher, Violine.
-                            Goethe-Institut Moskau,
-                            Leninskij Prospekt 95a,
-                            119313 Moskau, Russische Föderation
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </section>
-        <section class="auffuehrung">
-            <a href="ProgrammDetail.html">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-3">
-                        <h3>Mensch, Luther!</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2 col-sm-offset-1 gigDate">
-                        <p>
-                            Mittwoch<br class="hidden-xs" />
-                            11. Oktober 2017<br class="hidden-xs" />
-                            20 Uhr
-                        </p>
-                    </div>
-                    <div class="col-sm-8">
-                        <p class="description">Ein Lebensportrait in Briefen, Reflexionen und Musik</p>
-                        <p>
-                            Vera Bauer, Sprecherin – David Goldzycher, Violine.
-                            Goethe-Institut Moskau,
-                            Leninskij Prospekt 95a,
-                            119313 Moskau, Russische Föderation
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </section>
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <h2>Bevorstehende Aufführungen</h2>
+    </div>
+</div>
+@foreach (var auffuehrung in auffuehrungen)
+{
+    @Html.Partial("~/Views/Partials/_Auffuehrung.cshtml", auffuehrung);
+}
+        
+       

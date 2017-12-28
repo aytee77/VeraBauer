@@ -1,7 +1,8 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Programme>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-    Layout = "~/Views/shared/_Master.cshtml"; 
+    Layout = "~/Views/shared/_Master.cshtml";
+    var children = Model.Content.Children().Where("Visible");
 }
 
 
@@ -10,51 +11,14 @@
         <h1>@Umbraco.Field("titel")</h1>
     </div>
 </section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="ProgrammDetail.html">
-            <h3>Mensch, Luther!</h3>
-            <p class="description">Ein Lebensportrait in Briefen, Reflexionen und Musik</p>
-        </a>
-    </div>
-</section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="#">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </a>
-    </div>
-</section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="#">
-            <h3>Lorem ipsum dolor</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetuer</p>
-        </a>
-    </div>
-</section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="#">
-            <h3>Lorem ipsum dolor sit</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing </p>
-        </a>
-    </div>
-</section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="#">
-            <h3>Lorem ipsum</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </a>
-    </div>
-</section>
-<section class="row programm">
-    <div class="col-sm-10 col-sm-offset-1">
-        <a href="#">
-            <h3>Lorem ipsum dolor sit amet!</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetuer </p>
-        </a>
-    </div>
-</section>
+@foreach (var programm in children)
+{
+    <section class="row programm">
+        <div class="col-sm-10 col-sm-offset-1">
+            <a href="@programm.Url">
+                <h3>@programm.GetPropertyValue("titel")</h3>
+                <p class="description">@programm.GetPropertyValue("untertitel")</p>
+            </a>
+        </div>
+    </section>
+}
