@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e0e04c5d526fa1bd")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ae41cc10eabee01c")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 
 // FILE: models.generated.cs
@@ -215,6 +215,33 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Bild
+		///</summary>
+		[ImplementPropertyType("bild")]
+		public IPublishedContent Bild
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("bild"); }
+		}
+
+		///<summary>
+		/// Galerie
+		///</summary>
+		[ImplementPropertyType("galerie")]
+		public IEnumerable<IPublishedContent> Galerie
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("galerie"); }
+		}
+
+		///<summary>
+		/// Text
+		///</summary>
+		[ImplementPropertyType("text")]
+		public IHtmlString Text
+		{
+			get { return this.GetPropertyValue<IHtmlString>("text"); }
+		}
+
+		///<summary>
 		/// Titel
 		///</summary>
 		[ImplementPropertyType("titel")]
@@ -265,6 +292,112 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Kuenstler
 		{
 			get { return this.GetPropertyValue<string>("kuenstler"); }
+		}
+
+		///<summary>
+		/// Text
+		///</summary>
+		[ImplementPropertyType("text")]
+		public IHtmlString Text
+		{
+			get { return this.GetPropertyValue<IHtmlString>("text"); }
+		}
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[ImplementPropertyType("titel")]
+		public string Titel
+		{
+			get { return this.GetPropertyValue<string>("titel"); }
+		}
+
+		///<summary>
+		/// Untertitel
+		///</summary>
+		[ImplementPropertyType("untertitel")]
+		public string Untertitel
+		{
+			get { return this.GetPropertyValue<string>("untertitel"); }
+		}
+	}
+
+	/// <summary>Aufführung</summary>
+	[PublishedContentModel("auffuehrung")]
+	public partial class Auffuehrung : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "auffuehrung";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Auffuehrung(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Auffuehrung, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Datum
+		///</summary>
+		[ImplementPropertyType("datum")]
+		public DateTime Datum
+		{
+			get { return this.GetPropertyValue<DateTime>("datum"); }
+		}
+
+		///<summary>
+		/// Kurzbeschreibung
+		///</summary>
+		[ImplementPropertyType("kurzbeschreibung")]
+		public string Kurzbeschreibung
+		{
+			get { return this.GetPropertyValue<string>("kurzbeschreibung"); }
+		}
+
+		///<summary>
+		/// Programm
+		///</summary>
+		[ImplementPropertyType("programm")]
+		public IPublishedContent Programm
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("programm"); }
+		}
+	}
+
+	/// <summary>Pressetext</summary>
+	[PublishedContentModel("pressetext")]
+	public partial class Pressetext : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "pressetext";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Pressetext(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Pressetext, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>

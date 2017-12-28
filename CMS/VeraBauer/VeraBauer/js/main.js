@@ -9,8 +9,9 @@ function PageInit() {
     squareCalc();
     InitMobilenav();
     handlHeaderSpace();
-    handleScrollHeader();
     initGallerie();
+    InitSpielplan();
+    setTimeout(handleScrollHeader, 20);
 }
 
 function PageResize() {
@@ -55,33 +56,41 @@ function squareCalc() {
 }
 
 function handlHeaderSpace() {
-    $("body").css("padding-top", $("header").height() + 30); 
+    $("body").css("padding-top", $("header").height() ); 
 }
 
 function handleScrollHeader() {
-    if ($(window).scrollTop() > 0) {
-        $("html").addClass("scrolled");
-    } else {
-        $("html").removeClass("scrolled");
+    if (!window.isSpielPlan) {
+        if ($(window).scrollTop() > 0) {
+            $("html").addClass("scrolled");
+        } else {
+            $("html").removeClass("scrolled");
+        }
     }
 }
 
 function initGallerie() {
     $('#GallerieButton').magnificPopup({
-        items: [
-            {
-                src: 'https://via.placeholder.com/800x900/ffffff'
-            },
-            {
-                src: 'https://via.placeholder.com/850x960/ffffff'
-            },
-            {
-                src: 'https://via.placeholder.com/400x500/ffffff'
-            },
-        ],
+        items: window.galerie,
         gallery: {
             enabled: true
         },
         type: 'image'
     });
+}
+
+function scrollToElem(selector, time)
+{
+    time == undefined && (time = 700);
+    var elem = $(selector)[0];
+    var offset = 0;
+    if (window.isSpielPlan) {
+        offset = $("header").height() + $(".fixed").height();
+    } else {
+        offset = $("header").height()
+    }
+
+    $("html").animate({
+        scrollTop: $(elem).offset().top - offset
+    }, time)
 }

@@ -1,0 +1,31 @@
+﻿@model IPublishedContent
+@using System.Globalization;
+@{
+    var programm = Model.GetPropertyValue<IPublishedContent>("programm");
+    var datetime = Model.GetPropertyValue<DateTime>("datum");
+    var ci = new CultureInfo("de-CH");
+}
+<section class="auffuehrung" data-date="@datetime">
+    <a href="@programm.Url">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-3">
+                <h3>@programm.GetPropertyValue("titel")</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1 gigDate">
+                <p>
+                    @datetime.ToString("dddd", ci)<br class="hidden-xs" />
+                    @datetime.ToString("dd. MMMM yyyy", ci)<br class="hidden-xs" />
+                    @datetime.ToString("HH:mm", ci) Uhr
+                </p>
+            </div>
+            <div class="col-sm-8">
+                <p class="description">@programm.GetPropertyValue("untertitel")</p>
+                <p>
+                    @Model.GetPropertyValue("kurzbeschreibung")
+                </p>
+            </div>
+        </div>
+    </a>
+</section>
