@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ae41cc10eabee01c")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1e0bd57119b2f191")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -65,6 +65,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Titel
 		{
 			get { return this.GetPropertyValue<string>("titel"); }
+		}
+
+		///<summary>
+		/// Titel 2
+		///</summary>
+		[ImplementPropertyType("titel2")]
+		public string Titel2
+		{
+			get { return this.GetPropertyValue<string>("titel2"); }
 		}
 	}
 
@@ -341,7 +350,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Kurzbeschreibung
+		/// Angaben
 		///</summary>
 		[ImplementPropertyType("kurzbeschreibung")]
 		public string Kurzbeschreibung
