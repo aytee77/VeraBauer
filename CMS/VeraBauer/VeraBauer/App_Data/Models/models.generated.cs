@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1e0bd57119b2f191")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "90dce6538f072f69")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -47,6 +47,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Bilder
+		///</summary>
+		[ImplementPropertyType("bilder")]
+		public IEnumerable<IPublishedContent> Bilder
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("bilder"); }
 		}
 
 		///<summary>
@@ -282,18 +291,36 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Künstler
 		///</summary>
 		[ImplementPropertyType("kuenstler")]
-		public string Kuenstler
+		public IHtmlString Kuenstler
 		{
-			get { return this.GetPropertyValue<string>("kuenstler"); }
+			get { return this.GetPropertyValue<IHtmlString>("kuenstler"); }
 		}
 
 		///<summary>
-		/// Text
+		/// In liste anzeigen: Wir nur auf der Seite "Programme" aufgelistet, wenn der Haken gesetzt ist.
+		///</summary>
+		[ImplementPropertyType("showInList")]
+		public bool ShowInList
+		{
+			get { return this.GetPropertyValue<bool>("showInList"); }
+		}
+
+		///<summary>
+		/// Text: ... welcher neben dem Bild läuft
 		///</summary>
 		[ImplementPropertyType("text")]
 		public IHtmlString Text
 		{
 			get { return this.GetPropertyValue<IHtmlString>("text"); }
+		}
+
+		///<summary>
+		/// Text unter Bild: ... welcher über die ganze Breite läuft.
+		///</summary>
+		[ImplementPropertyType("textUnterBild")]
+		public IHtmlString TextUnterBild
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textUnterBild"); }
 		}
 
 		///<summary>
@@ -365,6 +392,24 @@ namespace Umbraco.Web.PublishedContentModels
 		public IPublishedContent Programm
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("programm"); }
+		}
+
+		///<summary>
+		/// Titel: Falls kein Programm verlinkt.
+		///</summary>
+		[ImplementPropertyType("titel")]
+		public string Titel
+		{
+			get { return this.GetPropertyValue<string>("titel"); }
+		}
+
+		///<summary>
+		/// Untertitel: Falls kein Programm verlinkt.
+		///</summary>
+		[ImplementPropertyType("untertitel")]
+		public string Untertitel
+		{
+			get { return this.GetPropertyValue<string>("untertitel"); }
 		}
 	}
 

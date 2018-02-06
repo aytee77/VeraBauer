@@ -11,6 +11,7 @@ function PageInit() {
     handlHeaderSpace();
     initGallerie();
     InitSpielplan();
+    initHomeSlider();
     setTimeout(handleScrollHeader, 20);
 }
 
@@ -21,6 +22,16 @@ function PageResize() {
 
 function PageScroll() {
     handleScrollHeader();
+}
+
+function initHomeSlider() {
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 2000,
+        },
+        effect: "fade",
+        autoHeight: true,
+    });
 }
 
 function InitMobilenav() {
@@ -56,7 +67,7 @@ function squareCalc() {
 }
 
 function handlHeaderSpace() {
-    $("body").css("padding-top", $("header").height() ); 
+    $("body > .container").css("padding-top", $("header").height() ); 
 }
 
 function handleScrollHeader() {

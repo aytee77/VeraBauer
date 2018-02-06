@@ -11,8 +11,19 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-6 col-sm-offset-right-1 pull-right">
-        <img alt="Vera Bauer" class="img-responsive" src="https://via.placeholder.com/800x500/ffffff" />
+    <div class="col-sm-6 col-sm-offset-right-1 pull-right" style="max-width:100%;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                @if (Model.Content.HasValue("bilder"))
+                {
+                    var imagesList = Model.Content.GetPropertyValue<List<IPublishedContent>>("bilder");     
+                    foreach (var imageItem in imagesList)
+                    {
+                        <div class="swiper-slide"><img alt="Vera Bauer" class="img-responsive" src="@imageItem.Url" /></div>
+                    } 
+                }
+            </div>
+        </div>
     </div>
     <div class="col-sm-4 col-sm-offset-1">
         @Umbraco.Field("einleitung")

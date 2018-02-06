@@ -1,5 +1,14 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Lato');
 /* palette: http://paletton.com/#uid=73y0o0kllHa00++aMSVxT-6NGhL */
+html, body{
+    height: 100%;
+    margin:0;
+}
+body > .container{
+    min-height:100%;
+    padding-bottom:86px;
+}
+
 body {
     background-color: #4B8FC7;
     color: #fff;
@@ -8,6 +17,7 @@ body {
 }
 h1, h2, h3, h4 {
     color: #FFB800;
+    letter-spacing: 0.6px;
 }
 
 h1 {
@@ -25,9 +35,9 @@ h2 {
     }
 p {
     margin-top: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
-p.lead {
+p.lead, div.lead p {
     font-size: 19px;
     margin-bottom: 35px;
 }
@@ -45,6 +55,12 @@ header {
 }
 .scrolled header {
     box-shadow: #222 0 -6px 16px;
+}
+
+footer{
+    padding:20px 0;
+    text-align:center;
+    margin-top:-86px;
 }
 nav {
     margin-top: 15px;
@@ -144,6 +160,7 @@ nav a div span, nav a div svg, .button div span {
     width: 35px;
     float: right;
     cursor: pointer;
+    margin-right: 30px;
 }
 .filter {
     margin-bottom: 20px;

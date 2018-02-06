@@ -6,10 +6,18 @@
     var ci = new CultureInfo("de-CH");
 }
 <section class="auffuehrung" data-date="@datetime">
-    <a href="@programm.Url">
+    @if(programm != null)
+    {
+       @:<a href="@programm.Url">
+    }
         <div class="row">
             <div class="col-sm-8 col-sm-offset-3">
-                <h3>@programm.GetPropertyValue("titel")</h3>
+                @if (programm != null)
+                {
+                    <h3>@programm.GetPropertyValue("titel")</h3>
+                }else{
+                    <h3> @Model.GetPropertyValue("titel") </h3>
+                }
             </div>
         </div>
         <div class="row">
@@ -21,11 +29,20 @@
                 </p>
             </div>
             <div class="col-sm-8">
-                <p class="description">@programm.GetPropertyValue("untertitel")</p>
+                @if (programm != null)
+                {
+                    <p class="description">@programm.GetPropertyValue("untertitel")</p>
+                }else{
+                    <p class="description">@Model.GetPropertyValue("untertitel")</p>
+                }
                 <p>
                     @Model.GetPropertyValue("kurzbeschreibung")
                 </p>
             </div>
         </div>
-    </a>
+
+    @if (programm != null)
+    {
+       @:</a>
+    }
 </section>

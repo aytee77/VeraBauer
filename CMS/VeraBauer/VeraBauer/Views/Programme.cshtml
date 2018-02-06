@@ -2,7 +2,7 @@
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
     Layout = "~/Views/shared/_Master.cshtml";
-    var children = Model.Content.Children().Where("Visible");
+    var children = Model.Content.Children().Where("Visible AND showInList");
 }
 
 
