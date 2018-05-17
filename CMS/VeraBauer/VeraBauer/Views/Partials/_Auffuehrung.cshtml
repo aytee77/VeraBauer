@@ -25,7 +25,9 @@
                 <p>
                     @datetime.ToString("dddd", ci)<br class="hidden-xs" />
                     @datetime.ToString("dd. MMMM yyyy", ci)<br class="hidden-xs" />
-                    @datetime.ToString("HH:mm", ci) Uhr
+                    @if (datetime.Hour != 0 && datetime.Minute != 0) {
+                        @Html.Raw(datetime.ToString("HH:mm", ci) + "Uhr");
+                    }
                 </p>
             </div>
             <div class="col-sm-8">
